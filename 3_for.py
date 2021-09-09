@@ -1,16 +1,16 @@
-# # practice1
-# list1 = []
-# for i in range(1, 10):
-#     list1.append(i)
-#
-# for line in list1:
-#     line += 1
-#     print(line)
-#
-# # practice2
-# line = str(input('Введите строку: '))
-# for letter in line:
-#     print(letter)
+# practice1
+list1 = []
+for i in range(1, 10):
+    list1.append(i)
+
+for line in list1:
+    line += 1
+    print(line)
+
+# practice2
+line = str(input('Введите строку: '))
+for letter in line:
+    print(letter)
 
 """
 
@@ -34,26 +34,13 @@ def main(score_list):
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    score_sum = 0
-    for dict1 in score_list:
-        for score in dict1['scores']:
-            score_sum += score
-    print(score_sum/len(dict1['scores']))
-
-    score_sum1 = 0
-    for score in score_list[0]['scores']:
-        score_sum1 += score
-    print(score_sum1 / len(score_list[0]['scores']))
-
-    score_sum2 = 0
-    for score in score_list[1]['scores']:
-        score_sum2 += score
-    print(score_sum2 / len(score_list[1]['scores']))
-
-    score_sum3 = 0
-    for score in score_list[2]['scores']:
-        score_sum3 += score
-    print(score_sum3 / len(score_list[2]['scores']))
+    klass_average_sum = []
+    for klass in score_list:
+        klass_average = (sum(klass['scores']) / len(klass['scores']))
+        klass_average_sum.append(klass_average)
+    print(sum(klass_average_sum) / len(klass_average_sum))
+    for score in klass_average_sum:
+        print(score)
 
 
 if __name__ == "__main__":
