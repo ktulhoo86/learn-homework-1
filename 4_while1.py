@@ -14,7 +14,6 @@ def hello_user():
     """
     Замените pass на ваш код
     """
-
     while True:
         user_answer = str(input('Как дела?'))
         if user_answer == 'Хорошо':
