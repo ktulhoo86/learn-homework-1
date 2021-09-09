@@ -15,13 +15,28 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {"если я чешу в затылке": "не беда",
+                         "в голове моей опилки": "да, да, да",
+                         "но хотя там и опилки": "и кричалки и вопилки",
+                         "сочинию я неплохо иногда": "да!",
+                         "хорошо живет на свете": "песни вслух",
+                         "и не важно, чем он занят": "если он худеть не станет",
+                         "а ведь он худеть не станет": "если конечно вовремя подкрепиться",
+                         "да!": "да!"
+                         }
+
 
 def ask_user(answers_dict):
     """
     Замените pass на ваш код
     """
-    pass
+    print('Подпевай!!!')
+    while True:
+        question = str(input('Пользователь:')).lower()
+        for key, value in answers_dict.items():
+            if question == key:
+                print(f'Программа: {value}')
+
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
