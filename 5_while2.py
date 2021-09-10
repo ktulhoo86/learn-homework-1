@@ -30,7 +30,6 @@ def ask_user(answers_dict):
     """
     Замените pass на ваш код
     """
-    print('Подпевай!!!')
     while True:
         question = str(input('Пользователь:')).lower()
         for key, value in answers_dict.items():
