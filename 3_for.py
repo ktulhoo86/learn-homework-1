@@ -1,16 +1,14 @@
-# practice1
-list1 = []
-for i in range(1, 10):
-    list1.append(i)
-
-for line in list1:
-    line += 1
-    print(line)
-
-# practice2
-line = str(input('Введите строку: '))
-for letter in line:
-    print(letter)
+# # practice1
+# list1 = list(range(10))
+#
+# for line in list1:
+#     line += 1
+#     print(line)
+#
+# # practice2
+# line = str(input('Введите строку: '))
+# for letter in line:
+#     print(letter)
 
 """
 
@@ -35,10 +33,13 @@ def main(score_list):
     В ней надо заменить pass на ваш код
     """
     klass_average_sum = []
+    school_average_sum = []
     for klass in score_list:
+        for scores in klass['scores']:
+            school_average_sum.append(scores)
         klass_average = (sum(klass['scores']) / len(klass['scores']))
         klass_average_sum.append(klass_average)
-    print(sum(klass_average_sum) / len(klass_average_sum))
+    print(sum(school_average_sum) / len(school_average_sum))
     for score in klass_average_sum:
         print(score)
 
