@@ -33,6 +33,8 @@ def ask_user(answers_dict):
     try:
         while True:
             question = str(input('Пользователь:')).lower()
+            """Выбрал .get() так как встроенный метод, по идее, должен
+            быть наиболее оптимизированным"""
             print(answers_dict.get(question))
 
             # another option
