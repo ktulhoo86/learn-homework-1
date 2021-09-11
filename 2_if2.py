@@ -21,7 +21,7 @@ def main(string1, string2):
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    if type(string1) != str and type(string2) != str:
+    if not isinstance(string1, str) and not isinstance(string2, str):
         return 0
     elif string1 == string2:
         return 1
