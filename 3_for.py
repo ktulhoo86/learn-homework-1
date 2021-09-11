@@ -1,14 +1,14 @@
-# # practice1
-# list1 = list(range(10))
-#
-# for line in list1:
-#     line += 1
-#     print(line)
-#
-# # practice2
-# line = str(input('Введите строку: '))
-# for letter in line:
-#     print(letter)
+# practice1
+list1 = list(range(10))
+
+for line in list1:
+    line += 1
+    print(line)
+
+# practice2
+line = str(input('Введите строку: '))
+for letter in line:
+    print(letter)
 
 """
 

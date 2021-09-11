@@ -30,11 +30,21 @@ def ask_user(answers_dict):
     """
     Замените pass на ваш код
     """
-    while True:
-        question = str(input('Пользователь:')).lower()
-        for key, value in answers_dict.items():
-            if question == key:
-                print(f'Программа: {value}')
+    try:
+        while True:
+            question = str(input('Пользователь:')).lower()
+            print(answers_dict.get(question))
+
+            # another option
+            # if question in answers_dict:
+            #     print(answers_dict[question])
+
+            # another option
+            # for key, value in answers_dict.items():
+            #     if question in key:
+            #         print(f'Программа: {value}')
+    except KeyboardInterrupt:
+        print("\nПока!")
 
     
 if __name__ == "__main__":
