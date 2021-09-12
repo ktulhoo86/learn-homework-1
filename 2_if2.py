@@ -21,7 +21,7 @@ def main(string1, string2):
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    if not isinstance(string1, str) and not isinstance(string2, str):
+    if not isinstance(string1, str) or not isinstance(string2, str):
         return 0
     elif string1 == string2:
         return 1
@@ -32,7 +32,7 @@ def main(string1, string2):
 
 
 if __name__ == "__main__":
-    print(main(True, False))
+    print(main(1, 'box'))
     print(main('box', 'box'))
     print(main('boxx', 'box'))
     print(main('boxx', 'learn'))
